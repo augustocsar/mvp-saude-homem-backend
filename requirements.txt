@@ -1,0 +1,13 @@
+fastapi
+uvicorn[standard]
+oci
+borneo
+python-jose[cryptography]
+passlib[bcrypt]
+python-multipart
+python-decouple
+feedparser
+requests
+firebase-admin
+APScheduler
+pydantic[email]
