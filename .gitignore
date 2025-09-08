@@ -40,3 +40,6 @@ Thumbs.db
 
 # Logs
 *.log
+
+# Chave privada do Oracle NoSQL
+oracle_key/
