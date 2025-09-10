@@ -1,8 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from app.routes.router import router  # ← CORRIGIR: router, não routes
-
-# resto do código igual...
+from app.routes.router import router
 
 app = FastAPI(
     title="MVP Saúde do Homem - CheckMen",
@@ -20,7 +18,7 @@ app.add_middleware(
 )
 
 # Incluir todas as rotas
-app.include_router(router)  # ← ADICIONAR ESTA LINHA
+app.include_router(router)
 
 @app.get("/")
 async def root():
