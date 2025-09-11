@@ -1,6 +1,7 @@
+# app/database.py - CORRIGIR linha 3
 from borneo import NoSQLHandle, NoSQLHandleConfig
 from borneo.iam import SignatureProvider
-import config
+from app import config  # ← MUDAR ESTA LINHA
 import os
 
 class Database:
