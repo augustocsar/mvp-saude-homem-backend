@@ -16,11 +16,11 @@ class UserLogin(BaseModel):
 
 class UserOut(BaseModel):
     """Schema para retorno de dados do usuário (sem senha)"""
-    id: str
+    user_id: str
     name: str
     email: str
     created_at: datetime
-    updated_at: datetime
+
 
 class PasswordReset(BaseModel):
     """Schema para recuperação de senha"""
