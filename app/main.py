@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from app.routes.router import router
+from app.routes.router import router  # suas rotas gerais já existentes
+from app.routes.reminder_routes import router as reminder_router  # rota de lembretes
 
 app = FastAPI(
     title="MVP Saúde do Homem - CheckMen",
@@ -11,14 +12,17 @@ app = FastAPI(
 # CORS
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Em produção, especificar domínios
+    allow_origins=["*"],  # Em produção, especifique os domínios permitidos
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
-# Incluir todas as rotas
+# Incluir todas as rotas existentes
 app.include_router(router)
+
+# Incluir rotas de lembretes
+app.include_router(reminder_router)
 
 @app.get("/")
 async def root():
