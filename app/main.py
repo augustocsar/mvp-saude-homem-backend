@@ -18,7 +18,7 @@ app = FastAPI(
     title="MVP Saúde do Homem - CheckMen",
     description="API para aplicativo de saúde preventiva masculina",
     version="1.0.0",
-    lifespan=lifespan  # <-- ADICIONE ESTE PARÂMETRO
+    lifespan=lifespan
 )
 
 
